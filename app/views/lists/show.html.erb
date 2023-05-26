@@ -2,4 +2,18 @@
 
 <p> Name of the list: <%=@list.name  %></p>
 
+<ul>
+  <% @list.movies.each do |movie| %>
+    <li><%= movie.title %></li>
+        <%= link_to "Delete",
+        bookmark_path(@bookmark),
+        data: {turbo_method: :destroy, turbo_confirm: "Are you sure?"}
+      %>
+    <% end %>
+</ul>
+
+
+
+<%= link_to 'Add to a bookmark', new_list_bookmark_path(@list) %>
+
 <%= link_to 'Back to main page', lists_path %>
