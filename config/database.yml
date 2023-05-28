@@ -11,8 +11,8 @@ test:
   <<: *default
   database: rails-watch-list_test
 
-production:
-  <<: *default
-  database: hosting_image_upload_1208_production
-  username: hosting_image_upload_1208
-  password: <%= ENV["HOSTING_IMAGE_UPLOAD_1208_DATABASE_PASSWORD"] %>
+# production:
+#   <<: *default
+#   database: hosting_image_upload_1208_production
+#   username: hosting_image_upload_1208
+#   password: <%= ENV["HOSTING_IMAGE_UPLOAD_1208_DATABASE_PASSWORD"] %>
